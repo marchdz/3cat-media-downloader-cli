@@ -77,7 +77,8 @@ def print_header():
 
     print(Color.RED)
     for line in logo:
-        print(line.center(width))
+        padding = (width - len(line)) // 2
+        print(f"{' ' * padding}{line}")
 
     title_text = "3Cat Media Downloader (CLI)"
     title_padding = (width - len(title_text)) // 2
